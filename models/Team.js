@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const TeamSchema = new mongoose.Schema({
     conversations: {
-        type: Array
+        type: Array,
+        required: true
     },
     name: String,
     userId: String

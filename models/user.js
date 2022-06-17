@@ -15,10 +15,12 @@ const UserSchema = new mongoose.Schema(
             type: String
         },
         email:{
-            type: String
+            type: String,
+            required: true
         },
         password:{
-            type: String
+            type: String,
+            required: true
         },
         phone_number:{
             type: String
@@ -32,7 +34,7 @@ const UserSchema = new mongoose.Schema(
         languages:{
             type: String
         },
-        file: {type: String, required: true},
+        file: {type: String, required: false},
     }, {timestamps: true})
 
 module.exports =  mongoose.model("User", UserSchema)
