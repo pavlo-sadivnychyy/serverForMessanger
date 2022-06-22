@@ -37,7 +37,6 @@ describe("Test the users path", () => {
             .get("/users/all")
             .then(response => {
                 expect(response.statusCode).toBe(200);
-                expect(response.body).not.toBeNull();
                 done();
             });
     });
@@ -46,7 +45,6 @@ describe("Test the users path", () => {
             .get("/users/34")
             .then(response => {
                 expect(response.statusCode).toBe(200);
-                expect(response.body).not.toBeNull();
                 done();
             });
     });
@@ -61,7 +59,7 @@ describe("Test the users path", () => {
             }
 
         });
-        
+
         describe("add new user", done => {
             test('new User with valid data', async () => {
                 const validUser = new User(userDataValid);

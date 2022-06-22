@@ -1,8 +1,9 @@
 const app = require('./server')
+const mongoose = require('mongoose')
 const server = app.listen(9000, () => {
     console.log("Listening on port: " + 9000);
 });
-
+mongoose.connect('mongodb+srv://pavlosad:120798Pavlo@cluster0.yp6xw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 const io = require('socket.io')(server, {
     cors: {
         origin: "http://localhost:3000"
